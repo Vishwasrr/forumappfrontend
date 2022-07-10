@@ -4,6 +4,7 @@ import axios from "axios";
 import { url } from "../App";
 import { useNavigate } from "react-router-dom";
 import Form from "react-bootstrap/Form";
+import { Link } from "react-router-dom";
 
 
 function Login() {
@@ -53,6 +54,11 @@ function Login() {
         <Button variant="primary" onClick={() => handleSubmit()}>
           Submit
         </Button>
+        <br></br>
+        <br></br>
+        <div >
+          <Link to='/'><button >Register?</button></Link>
+        </div>
       </Form>
 
     </>
