@@ -22,7 +22,8 @@ function Login() {
       email,
     };
     let res = await axios.post(`${url}/login`, reqBody);
-    if (res.data.statusCode === 200) {
+    if (res.data.statusCode === 200 || res.data.statusCode === 201) {
+      sessionStorage.setItem("auth", "loggedIn");
       navigate("/questions");
     } else {
       console.log(res.data.message);
@@ -56,7 +57,7 @@ function Login() {
         </Button>
         <br></br>
         <br></br>
-        <div >
+        <div>
           <Link to='/'><button >Register?</button></Link>
         </div>
       </Form>
