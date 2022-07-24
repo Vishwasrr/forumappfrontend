@@ -24,7 +24,10 @@ function Register() {
       email
     };
     let res = await axios.post(`${url}/signup`, reqBody);
-    if (res.data.statusCode === 200) {
+    console.log(res.data.statusCode);
+    if (res.data.statusCode === 200 || res.data.statusCode === 201) {
+      alert("Successfully Registered");
+      console.log('hello');
       navigate("/");
     } else {
       console.log(res.data.message);
@@ -56,7 +59,7 @@ function Register() {
         <Form.Group className="mb-3">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            type="text"
+            type="password"
             placeholder="Enter Password"
             onChange={(e) => setPassword(e.target.value)}
           />
