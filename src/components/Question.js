@@ -27,10 +27,7 @@ function Question() {
           }
           ;
 
-          setData(value)
-
-
-
+          setData(value);
         }
       }
 
