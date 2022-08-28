@@ -120,7 +120,7 @@ function Question() {
         {data.map((e, i) => {
           return (
             <>
-              <div style={{ border: " 2px solid blue" }} key={i}>
+              <div style={{ border: " 2px solid blue", padding: "2% 2% 2% 2%" }} key={i}>
                 <div
                   style={{
                     "font-weight": "bold",
