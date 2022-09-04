@@ -28,7 +28,7 @@ function Register() {
     if (res.data.statusCode === 200 || res.data.statusCode === 201) {
       alert("Successfully Registered");
       console.log('hello');
-      navigate("/");
+      navigate("/Login");
     } else {
       console.log(res.data.message);
     }
